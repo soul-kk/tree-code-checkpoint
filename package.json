@@ -1,0 +1,21 @@
+{
+  "name": "pi-tree-code-checkpoint",
+  "version": "0.1.0",
+  "description": "Restore Pi edit/write file state when navigating with /tree",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "checkpoint",
+    "session-tree"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

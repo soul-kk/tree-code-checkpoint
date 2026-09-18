@@ -10,65 +10,7 @@
 
 ## 安装
 
-### 从本地目录全局安装
-
-```bash
-pi install /absolute/path/to/pi-tree-code-checkpoint
-```
-
-该命令把本地包路径写入用户级 `~/.pi/agent/settings.json`。包仍从原目录加载，因此不要随意移动或删除原目录。
-
-检查安装：
-
-```bash
-pi list
-```
-
-已运行的 Pi 需要执行：
-
-```text
-/reload
-```
-
-加载成功后，底部显示：
-
-```text
-tree code checkpoints on
-```
-
-也可以运行：
-
-```text
-/tree-checkpoint-status
-```
-
-### 从 Git 安装
-
-```bash
-pi install git:https://github.com/OWNER/pi-tree-code-checkpoint@v0.1.0
-```
-
-也支持：
-
-```bash
-pi install https://github.com/OWNER/pi-tree-code-checkpoint
-```
-
-### 从 npm 安装
-
-发布到 npm 后：
-
-```bash
-pi install npm:pi-tree-code-checkpoint@0.1.0
-```
-
-如果 npm 包名已被占用，请发布为自己的 scope，例如：
-
-```bash
-pi install npm:@OWNER/pi-tree-code-checkpoint@0.1.0
-```
-
-> Pi 扩展拥有当前用户的完整系统权限。安装第三方版本前应审查源码。
+` pi install git:https://github.com/soul-kk/tree-code-checkpoint.git@v0.1.0`
 
 ## 使用方法
 
@@ -132,25 +74,6 @@ pi install npm:@OWNER/pi-tree-code-checkpoint@0.1.0
 检查点包含源码的本地副本，可能含敏感内容。不要提交或分享 `.pi/tree-code-checkpoints/`。
 
 完整设计及验证记录见 [`docs/feasibility-and-verification.md`](docs/feasibility-and-verification.md)。
-
-## 开发与验证
-
-要求 Node.js 22+：
-
-```bash
-npm install
-npm run check
-```
-
-当前测试覆盖已有/新建文件恢复、连续修改、跨分支、会话重启、恢复/保留/取消、冲突、缺失对象、不可写、事务回滚、写入后元数据失败、符号链接和项目外路径保护。
-
-验证发布包内容：
-
-```bash
-npm pack --dry-run
-```
-
-## 分享给其他人
 
 ### 推荐：GitHub + 版本标签
 
